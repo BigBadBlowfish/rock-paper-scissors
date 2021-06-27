@@ -23,6 +23,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+document.querySelectorAll('button.choice').forEach(choice => {
+    choice.addEventListener('click', function() {
+        console.log(this.id);
+       playRound(this.id,computerPlay());
+    });
+});
+
+
 function game() {
 
     let playerScore = 0;
